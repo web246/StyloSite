@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact STYLO — Support & provider onboarding</title>
+    <meta name="description" content="Questions, partnerships, or provider onboarding — we'd love to hear from you." />
+    <meta property="og:title" content="Contact STYLO — Support & provider onboarding" />
+    <meta property="og:description" content="Get in touch for support, partnerships, or provider onboarding." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-poster.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav container">
+        <a class="brand" href="index.html" aria-label="STYLO home">
+          <span class="brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="8" y="8" width="48" height="48" rx="16" fill="#FCE4EC" />
+              <path d="M18 38c4-8 10-12 14-12 4 0 10 4 14 12" stroke="#F4689A" stroke-width="4" stroke-linecap="round" />
+              <path d="M24 20c4 0 7 2 8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+              <path d="M40 20c-4 0-7 2-8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>STYLO</span>
+        </a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__panel">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+          <a href="index.html#providers" class="btn btn--outline nav__pill">Become a Provider</a>
+          <a href="index.html#get-app" class="btn btn--primary nav__pill">Get the App</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-hero section">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <div class="pill pill--soft">Let’s talk</div>
+            <h1>Let's talk.</h1>
+            <p>Questions, partnerships, or provider onboarding — we'd love to hear from you.</p>
+          </div>
+          <div class="contact-phone phone phone--float reveal" data-delay="0.08">
+            <div class="phone__screen">
+              <div class="contact-card">
+                <form id="contact-form">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" required />
+
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+
+                  <label for="subject">Subject</label>
+                  <select id="subject" name="subject">
+                    <option>General</option>
+                    <option>Provider signup</option>
+                    <option>Press</option>
+                    <option>Support</option>
+                  </select>
+
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+
+                  <button class="btn btn--primary" type="submit">Send message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-info-section">
+        <div class="container contact-info-grid">
+          <div class="contact-details reveal">
+            <h2>Contact details</h2>
+            <ul>
+              <li><strong>Email:</strong> hello@stylo.app</li>
+              <li><strong>Phone:</strong> +44 20 7946 0000</li>
+              <li><strong>Address:</strong> 71-75 Shelton Street, London WC2H 9JQ</li>
+            </ul>
+            <iframe title="STYLO London office map" src="https://www.google.com/maps?q=London%20WC2H%209JQ&output=embed" loading="lazy"></iframe>
+          </div>
+          <div class="faq reveal" data-delay="0.08">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-item">
+              <button class="faq-question">How much does STYLO cost?<span>+</span></button>
+              <div class="faq-answer"><p>Customers pay a small £2.99 booking fee. Providers list free.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Do providers pay to list?<span>+</span></button>
+              <div class="faq-answer"><p>No. Providers can list their business free and keep 100% of earnings.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Is home service available?<span>+</span></button>
+              <div class="faq-answer"><p>Yes. STYLO supports home-service bookings for eligible professionals.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Which currencies are supported?<span>+</span></button>
+              <div class="faq-answer"><p>We support GBP and NGN for flexible local and cross-border bookings.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band cta-band--dark">
+        <div class="container cta-band__inner">
+          <h2>Need help getting started?</h2>
+          <div>
+            <a href="index.html#get-app" class="btn btn--primary">Get the App</a>
+            <a href="index.html#providers" class="btn btn--secondary">Become a Provider</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand--footer" href="index.html">
+            <span class="brand__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect x="8" y="8" width="48" height="48" rx="16" fill="#FCE4EC" />
+                <path d="M18 38c4-8 10-12 14-12 4 0 10 4 14 12" stroke="#F4689A" stroke-width="4" stroke-linecap="round" />
+                <path d="M24 20c4 0 7 2 8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+                <path d="M40 20c-4 0-7 2-8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span>STYLO</span>
+          </a>
+          <p>Book beauty and grooming pros near you—fairly, simply, locally.</p>
+        </div>
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="index.html#get-app">For Customers</a></li>
+            <li><a href="index.html#providers">For Providers</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 STYLO. Made with 💗 in London.</p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STYLO — Book beauty & grooming pros near you</title>
+    <meta name="description" content="STYLO helps customers find barbers, hair stylists, and nail techs, while providers list free and keep 100% of earnings." />
+    <meta property="og:title" content="STYLO — Book beauty & grooming pros near you" />
+    <meta property="og:description" content="Book in seconds, pay a tiny fee, and let pros come to you." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-poster.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav container">
+        <a class="brand" href="index.html" aria-label="STYLO home">
+          <span class="brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="8" y="8" width="48" height="48" rx="16" fill="#FCE4EC" />
+              <path d="M18 38c4-8 10-12 14-12 4 0 10 4 14 12" stroke="#F4689A" stroke-width="4" stroke-linecap="round" />
+              <path d="M24 20c4 0 7 2 8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+              <path d="M40 20c-4 0-7 2-8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>STYLO</span>
+        </a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__panel">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#get-app" class="btn btn--outline nav__pill">Become a Provider</a>
+          <a href="#get-app" class="btn btn--primary nav__pill">Get the App</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section section--hero">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/hero-poster.jpg" aria-hidden="true">
+          <source src="assets/hero-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <div class="pill pill--soft reveal" data-delay="0.05">✨ Now booking beauty & grooming pros</div>
+            <h1 class="display-heading" data-split>
+              Look your best. Book your glow in seconds.
+            </h1>
+            <p class="hero__subhead reveal" data-delay="0.15">
+              Discover verified barbers, hair stylists, and nail technicians near you. Book online, pay a tiny fee, and let the pros come to you.
+            </p>
+            <div class="hero__actions reveal" data-delay="0.2">
+              <a href="#get-app" class="btn btn--primary">Get the App</a>
+              <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+            </div>
+            <div class="trust-row reveal" data-delay="0.25">
+              <span class="trust-row__stars" aria-hidden="true">★★★★★</span>
+              <span>Loved by 2,000+ customers & 350+ pros</span>
+            </div>
+          </div>
+          <div class="hero__visual reveal" data-delay="0.12">
+            <div class="hero__blob"></div>
+            <div class="phone phone--float phone--video" style="--tilt:-3deg">
+              <div class="phone__screen">
+                <video autoplay muted loop playsinline poster="assets/app-lifestyle-2-poster.jpg">
+                  <source src="assets/app-lifestyle-2.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--split">
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <h2>One app. Two ways to glow.</h2>
+            <p>Whether you're booking or being booked, STYLO works for you.</p>
+          </div>
+          <div class="audience-grid">
+            <article class="card card--pink reveal" data-delay="0.05">
+              <div class="card__icon card__icon--pink">👤</div>
+              <h3>For Customers</h3>
+              <ul>
+                <li>Find pros near you in seconds</li>
+                <li>Book & pay online securely</li>
+                <li>Home service available</li>
+                <li>Save your favourites</li>
+              </ul>
+              <a href="#get-app" class="btn btn--primary">Get the App</a>
+            </article>
+            <article class="card card--blue reveal" data-delay="0.12">
+              <div class="card__icon card__icon--blue">✨</div>
+              <h3>For Providers</h3>
+              <ul>
+                <li>List your business free</li>
+                <li>Keep 100% of your earnings</li>
+                <li>Manage bookings from your phone</li>
+                <li>Get discovered locally</li>
+              </ul>
+              <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--showcase">
+        <div class="container showcase-grid">
+          <div class="showcase-phone reveal">
+            <div class="showcase-phones" aria-hidden="true">
+              <div class="phone-wrap phone-wrap--lg">
+                <div class="phone phone--float phone--shine phone--tilt-2">
+                  <div class="phone__screen">
+                    <img src="assets/customer-dashboard.png" alt="STYLO customer dashboard preview" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-wrap phone-wrap--md">
+                <div class="phone phone--float phone--video phone--tilt-6">
+                  <div class="phone__screen">
+                    <video autoplay muted loop playsinline poster="assets/app-lifestyle-1-poster.jpg">
+                      <source src="assets/app-lifestyle-1.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-wrap phone-wrap--sm">
+                <div class="phone phone--float phone--video phone--tilt-10">
+                  <div class="phone__screen">
+                    <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+                      <source src="assets/hero-loop.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-copy reveal" data-delay="0.08">
+            <div class="pill pill--soft">The app inside the app</div>
+            <h2>See the app, inside the app.</h2>
+            <p>A clean, friendly dashboard built for everyone, with instant search, live availability, and easy payments.</p>
+            <ul class="feature-list">
+              <li><span class="feature-list__icon feature-list__icon--pink">🔎</span><span>Smart search & filters</span></li>
+              <li><span class="feature-list__icon feature-list__icon--blue">📅</span><span>Real-time availability</span></li>
+              <li><span class="feature-list__icon feature-list__icon--pink">🏠</span><span>Home-service booking</span></li>
+              <li><span class="feature-list__icon feature-list__icon--blue">⭐</span><span>Ratings & reviews</span></li>
+              <li><span class="feature-list__icon feature-list__icon--pink">💳</span><span>Secure £2.99 booking fee</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--steps" id="providers">
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <h2>How it works</h2>
+            <p>Simple from first discovery to final glow-up.</p>
+          </div>
+          <div class="tabs reveal" role="tablist" aria-label="STYLO workflows">
+            <button class="tab is-active" data-tab="customers">For Customers</button>
+            <button class="tab" data-tab="providers">For Providers</button>
+            <span class="tab__indicator"></span>
+          </div>
+          <div class="steps-panel">
+            <div class="steps steps--customers is-active" data-panel="customers">
+              <article class="step-card reveal" data-delay="0.05">
+                <div class="step-card__number">01</div>
+                <h3>Discover</h3>
+                <p>Browse verified pros near you, filter by service, price, and home-service.</p>
+              </article>
+              <article class="step-card reveal" data-delay="0.1">
+                <div class="step-card__number">02</div>
+                <h3>Book</h3>
+                <p>Choose a time, confirm your booking, and pay a simple £2.99 fee online.</p>
+              </article>
+              <article class="step-card reveal" data-delay="0.15">
+                <div class="step-card__number">03</div>
+                <h3>Glow</h3>
+                <p>Show up, or let them come to you. Rate, save, and come back.</p>
+              </article>
+            </div>
+            <div class="steps steps--providers" data-panel="providers">
+              <article class="step-card reveal" data-delay="0.05">
+                <div class="step-card__number">01</div>
+                <h3>List</h3>
+                <p>Create your free business profile in minutes and add services & availability.</p>
+              </article>
+              <article class="step-card reveal" data-delay="0.1">
+                <div class="step-card__number">02</div>
+                <h3>Receive</h3>
+                <p>Get booking requests instantly and confirm them from your phone.</p>
+              </article>
+              <article class="step-card reveal" data-delay="0.15">
+                <div class="step-card__number">03</div>
+                <h3>Earn</h3>
+                <p>Keep 100% of every service and track earnings in your dashboard.</p>
+              </article>
+            </div>
+          </div>
+          <svg class="steps-line" viewBox="0 0 900 120" aria-hidden="true">
+            <path d="M60 60 C220 60, 280 60, 420 60 S680 60, 840 60" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section section--video-wall">
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>Beauty, books.</h2>
+            <p>Watch the experience unfold in real time.</p>
+          </div>
+          <div class="masonry-grid">
+            <article class="masonry-tile reveal" data-delay="0.03">
+              <video autoplay muted loop playsinline poster="assets/nail-service-poster.jpg" loading="lazy">
+                <source src="assets/nail-service.mp4" type="video/mp4" />
+              </video>
+              <div class="masonry-tile__caption">Nail care</div>
+            </article>
+            <article class="masonry-tile reveal" data-delay="0.06">
+              <video autoplay muted loop playsinline poster="assets/app-lifestyle-1-poster.jpg" loading="lazy">
+                <source src="assets/app-lifestyle-1.mp4" type="video/mp4" />
+              </video>
+              <div class="masonry-tile__caption">Booked in seconds</div>
+            </article>
+            <article class="masonry-tile reveal" data-delay="0.09">
+              <video autoplay muted loop playsinline poster="assets/hero-poster.jpg" loading="lazy">
+                <source src="assets/hero-loop.mp4" type="video/mp4" />
+              </video>
+              <div class="masonry-tile__caption">Barbering</div>
+            </article>
+            <article class="masonry-tile reveal" data-delay="0.12">
+              <img src="assets/stylist.jpg" alt="Stylist portrait" loading="lazy" decoding="async" />
+              <div class="masonry-tile__caption">Styled to shine</div>
+            </article>
+            <article class="masonry-tile masonry-tile--wide reveal" data-delay="0.15">
+              <video autoplay muted loop playsinline poster="assets/app-lifestyle-2-poster.jpg" loading="lazy">
+                <source src="assets/barber-shave.mp4" type="video/mp4" />
+              </video>
+              <div class="masonry-tile__caption">Home service</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--provider-spotlight">
+        <div class="container spotlight-grid">
+          <div class="spotlight-copy reveal">
+            <div class="pill pill--soft">For providers</div>
+            <h2>List free. Earn more.</h2>
+            <p>Providers pay nothing to join and keep every penny. We only charge customers a small £2.99 booking fee to keep the platform running.</p>
+            <div class="stats-row">
+              <div><strong>£0</strong><span>listing fee</span></div>
+              <div><strong>100%</strong><span>earnings kept</span></div>
+              <div><strong>350+</strong><span>pros onboard</span></div>
+            </div>
+            <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+          </div>
+          <div class="spotlight-phone reveal" data-delay="0.08">
+            <div class="phone phone--float phone--shine" style="--tilt:-2deg">
+              <div class="phone__screen">
+                <img src="assets/provider-dashboard.png" alt="STYLO provider dashboard preview" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-band">
+        <div class="container stats-grid">
+          <div class="stat-card" data-count="2000" data-suffix="+">
+            <strong>0</strong>
+            <span>Happy customers</span>
+          </div>
+          <div class="stat-card" data-count="350" data-suffix="+">
+            <strong>0</strong>
+            <span>Verified providers</span>
+          </div>
+          <div class="stat-card" data-count="12000" data-suffix="+">
+            <strong>0</strong>
+            <span>Bookings made</span>
+          </div>
+          <div class="stat-card" data-count="4.9" data-decimals="1" data-suffix="★">
+            <strong>0</strong>
+            <span>Average rating</span>
+          </div>
+          <div class="particles" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section testimonials-section">
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <h2>Loved on both sides of the chair.</h2>
+            <p>Trusted by customers and providers alike.</p>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card reveal" data-delay="0.02">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>“I booked a barber in under a minute and he came to my flat. Easiest booking ever.”</p>
+              <span>James O.</span>
+            </article>
+            <article class="testimonial-card reveal" data-delay="0.05">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>“40 new clients in month one. I pay nothing to list — it’s a no-brainer.”</p>
+              <span>Amara K., Hair Stylist</span>
+            </article>
+            <article class="testimonial-card reveal" data-delay="0.08">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>“Home nail service with two kids at home. Lifesaver.”</p>
+              <span>Priya S.</span>
+            </article>
+            <article class="testimonial-card reveal" data-delay="0.11">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>“My calendar stays full and I keep every penny I earn.”</p>
+              <span>Tunde B., Barber</span>
+            </article>
+            <article class="testimonial-card reveal" data-delay="0.14">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>“Found an amazing stylist near me in seconds.”</p>
+              <span>Sofia R.</span>
+            </article>
+            <article class="testimonial-card reveal" data-delay="0.17">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>“Onboarding took 5 minutes. Dashboard is so clean.”</p>
+              <span>Mei L., Nail Tech</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--footer-phones">
+        <div class="container phone-pair-wrap">
+          <div class="section-heading section-heading--center reveal">
+            <h2>Two dashboards. One glow.</h2>
+            <p>Customer on the left. Provider on the right. Built for both.</p>
+          </div>
+          <div class="phone-pair">
+            <div class="phone-pair__item reveal" data-delay="0.08">
+              <div class="phone phone--app-loop phone--flip">
+                <div class="phone__screen">
+                  <img class="layer layer--login" src="assets/login.png" alt="STYLO customer login preview" />
+                  <img class="layer layer--dash active" src="assets/customer-dashboard.png" alt="STYLO customer dashboard preview" />
+                </div>
+              </div>
+              <div class="phone-pair__label">Customer Dashboard</div>
+            </div>
+            <div class="phone-pair__item reveal" data-delay="0.16">
+              <div class="phone phone--app-loop phone--flip">
+                <div class="phone__screen">
+                  <img class="layer layer--login" src="assets/login.png" alt="STYLO provider login preview" />
+                  <img class="layer layer--dash active" src="assets/provider-dashboard.png" alt="STYLO provider dashboard preview" />
+                </div>
+              </div>
+              <div class="phone-pair__label phone-pair__label--blue">Provider Dashboard</div>
+            </div>
+          </div>
+          <div class="footer-cta reveal" id="get-app">
+            <a href="#top" class="btn btn--primary">Get the App</a>
+            <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand--footer" href="index.html">
+            <span class="brand__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect x="8" y="8" width="48" height="48" rx="16" fill="#FCE4EC" />
+                <path d="M18 38c4-8 10-12 14-12 4 0 10 4 14 12" stroke="#F4689A" stroke-width="4" stroke-linecap="round" />
+                <path d="M24 20c4 0 7 2 8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+                <path d="M40 20c-4 0-7 2-8 8" stroke="#7AB8E8" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span>STYLO</span>
+          </a>
+          <p>Book beauty and grooming pros near you—fairly, simply, locally.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="X">✕</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="TikTok">♫</a>
+          </div>
+        </div>
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">For Customers</a></li>
+            <li><a href="#">For Providers</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 STYLO. Made with 💗 in London.</p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
