@@ -27,6 +27,7 @@ function toggleMenu(force) {
   const shouldOpen = typeof force === 'boolean' ? force : !navPanel?.classList.contains('is-open');
   navPanel?.classList.toggle('is-open', shouldOpen);
   navToggle?.setAttribute('aria-expanded', String(shouldOpen));
+  document.body.style.overflow = shouldOpen ? 'hidden' : '';
 }
 
 function handleScrollTop() {
@@ -180,6 +181,28 @@ function animateLine() {
   observer.observe(line);
 }
 
+function setupCityToggle() {
+  const cityGrid = document.querySelector('.city-grid');
+  const cityToggle = document.querySelector('.city-toggle');
+  if (!cityGrid || !cityToggle) return;
+
+  const liveCities = [
+    'Birmingham', 'Bradford', 'Derby', 'Leeds', 'Leicester',
+    'Liverpool', 'London', 'Manchester', 'Rotherham', 'Sheffield'
+  ];
+
+  cityGrid.querySelectorAll('.city-card').forEach((card) => {
+    const name = card.querySelector('h3')?.textContent?.trim();
+    if (!name) return;
+    if (!liveCities.includes(name)) card.classList.add('city-card--hidden');
+  });
+
+  cityToggle.addEventListener('click', () => {
+    const expanded = cityGrid.classList.toggle('expanded');
+    cityToggle.textContent = expanded ? 'Show fewer cities' : 'Show more cities';
+  });
+}
+
 function setupScrollBehavior() {
   scrollTopBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -199,8 +222,13 @@ window.addEventListener('scroll', () => {
   handleScrollTop();
   parallax();
 });
-window.addEventListener('resize', toggleMenu.bind(null, false));
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 840) toggleMenu(false);
+});
 navToggle?.addEventListener('click', () => toggleMenu());
+navPanel?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => toggleMenu(false));
+});
 window.addEventListener('DOMContentLoaded', () => {
   setHeaderState();
   handleScrollTop();
@@ -214,5 +242,27 @@ window.addEventListener('DOMContentLoaded', () => {
   createParticles();
   animateLine();
   setupScrollBehavior();
+  setupCityToggle();
   if (form) form.addEventListener('submit', handleForm);
+  // Ensure hero video attempts to play (handle autoplay restrictions)
+  if (heroVideo) {
+    // Ensure muted and playsinline are set (helps autoplay policies)
+    heroVideo.muted = true;
+    heroVideo.setAttribute('muted', '');
+    heroVideo.setAttribute('playsinline', '');
+    // Force the browser to load the media resource before playing
+    try { heroVideo.load(); } catch (e) { /* ignore */ }
+
+    const tryPlay = () => {
+      heroVideo.play().catch((err) => {
+        console.warn('Hero video play failed:', err);
+        showToast('Video unavailable — showing poster image.');
+      });
+    };
+
+    // Try after a short delay to allow file loading
+    setTimeout(tryPlay, 250);
+    // And again when window gains focus
+    window.addEventListener('focus', tryPlay);
+  }
 });

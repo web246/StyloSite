@@ -35,8 +35,8 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="contact.html" class="active">Contact</a>
-          <a href="index.html#providers" class="btn btn--outline nav__pill">Become a Provider</a>
-          <a href="index.html#get-app" class="btn btn--primary nav__pill">Get the App</a>
+          <a href="contact.html" class="btn btn--outline nav__pill">Become a Provider</a>
+          <a href="coming-soon.html" class="btn btn--primary nav__pill">Get the App</a>
         </div>
       </nav>
     </header>
@@ -44,21 +44,48 @@
     <main>
       <section class="contact-hero section">
         <div class="container contact-grid">
-          <div class="reveal">
+          <div class="reveal contact-intro">
             <div class="pill pill--soft">Let’s talk</div>
-            <h1>Let's talk.</h1>
-            <p>Questions, partnerships, or provider onboarding — we'd love to hear from you.</p>
+            <h1>We’re here to help.</h1>
+            <p>Questions, partnerships, or provider onboarding — we’d love to hear from you. We usually reply within one working day.</p>
+            <div class="contact-highlights">
+              <div class="contact-pill">
+                <span class="contact-pill__icon">✉️</span>
+                <span>hello@stylo.app</span>
+              </div>
+              <div class="contact-pill">
+                <span class="contact-pill__icon">📞</span>
+                <span>+44 20 7946 0000</span>
+              </div>
+              <div class="contact-pill">
+                <span class="contact-pill__icon">📍</span>
+                <span>London, UK</span>
+              </div>
+            </div>
           </div>
-          <div class="contact-phone phone phone--float reveal" data-delay="0.08">
-            <div class="phone__screen">
-              <div class="contact-card">
-                <form id="contact-form">
+          <div class="contact-shell reveal" data-delay="0.08">
+            <div class="contact-shell__glow"></div>
+            <div class="contact-card contact-card--animated">
+              <div class="contact-card__header">
+                <div>
+                  <p class="contact-card__eyebrow">Quick message</p>
+                  <h2>Start a conversation</h2>
+                </div>
+                <div class="contact-card__status">
+                  <span></span>
+                  Usually online
+                </div>
+              </div>
+              <form id="contact-form">
+                <div class="form-row">
                   <label for="name">Name</label>
-                  <input id="name" name="name" type="text" required />
-
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div class="form-row">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required />
-
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-row">
                   <label for="subject">Subject</label>
                   <select id="subject" name="subject">
                     <option>General</option>
@@ -66,13 +93,13 @@
                     <option>Press</option>
                     <option>Support</option>
                   </select>
-
+                </div>
+                <div class="form-row">
                   <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-
-                  <button class="btn btn--primary" type="submit">Send message</button>
-                </form>
-              </div>
+                  <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..." required></textarea>
+                </div>
+                <button class="btn btn--primary" type="submit">Send message</button>
+              </form>
             </div>
           </div>
         </div>
@@ -81,19 +108,60 @@
       <section class="section contact-info-section">
         <div class="container contact-info-grid">
           <div class="contact-details reveal">
-            <h2>Contact details</h2>
-            <ul>
-              <li><strong>Email:</strong> hello@stylo.app</li>
-              <li><strong>Phone:</strong> +44 20 7946 0000</li>
-              <li><strong>Address:</strong> 71-75 Shelton Street, London WC2H 9JQ</li>
-            </ul>
-            <iframe title="STYLO London office map" src="https://www.google.com/maps?q=London%20WC2H%209JQ&output=embed" loading="lazy"></iframe>
+            <h2>Reach us</h2>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <p>hello@stylo.app</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+44 20 7946 0000</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>71-75 Shelton Street, London WC2H 9JQ</p>
+                </div>
+              </div>
+            </div>
+            <div class="map-card">
+              <div class="map-card__header">
+                <div>
+                  <h3>Visit our London studio</h3>
+                  <p>Open for meetings, partnerships, and onboarding support.</p>
+                </div>
+                <a class="btn btn--outline map-card__link" href="https://www.google.com/maps/search/?api=1&query=71-75+Shelton+Street+London+WC2H+9JQ" target="_blank" rel="noreferrer">Open directions</a>
+              </div>
+              <div class="map-card__visual" role="img" aria-label="Stylised map showing the London studio location">
+                <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="640" height="360" rx="28" fill="#f8f4ff" />
+                  <rect x="42" y="42" width="556" height="276" rx="20" fill="#ffffff" stroke="#e9dcff" stroke-width="2" />
+                  <path d="M98 256c24-28 44-42 62-42 18 0 34 11 56 33 20 20 38 34 62 34 32 0 42-18 66-30 24-12 42-8 64 8" fill="none" stroke="#caa7ff" stroke-width="10" stroke-linecap="round" />
+                  <path d="M126 155h118M126 190h78M284 138h138M284 176h90M182 214h174" fill="none" stroke="#7ab8e8" stroke-width="8" stroke-linecap="round" />
+                  <path d="M432 114c0 36-58 84-58 84s-58-48-58-84a58 58 0 1 1 116 0z" fill="#f4689a" />
+                  <circle cx="374" cy="114" r="20" fill="#fff" />
+                  <circle cx="374" cy="114" r="10" fill="#7c3aed" />
+                  <rect x="104" y="78" width="140" height="64" rx="14" fill="#fce4ec" />
+                  <path d="M136 127l28-26 24 24 36-42" fill="none" stroke="#f4689a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M160 266h120" stroke="#d8c8ff" stroke-width="8" stroke-linecap="round" />
+                  <path d="M478 238h74" stroke="#d8c8ff" stroke-width="8" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
           </div>
           <div class="faq reveal" data-delay="0.08">
             <h2>Frequently asked questions</h2>
             <div class="faq-item">
               <button class="faq-question">How much does STYLO cost?<span>+</span></button>
-              <div class="faq-answer"><p>Customers pay a small £2.99 booking fee. Providers list free.</p></div>
+              <div class="faq-answer"><p>Customers pay a small £1.99 booking fee. Providers list free.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-question">Do providers pay to list?<span>+</span></button>
@@ -115,8 +183,8 @@
         <div class="container cta-band__inner">
           <h2>Need help getting started?</h2>
           <div>
-            <a href="index.html#get-app" class="btn btn--primary">Get the App</a>
-            <a href="index.html#providers" class="btn btn--secondary">Become a Provider</a>
+            <a href="coming-soon.html" class="btn btn--primary">Get the App</a>
+            <a href="contact.html" class="btn btn--secondary">Become a Provider</a>
           </div>
         </div>
       </section>
@@ -141,8 +209,8 @@
         <div>
           <h3>Product</h3>
           <ul>
-            <li><a href="index.html#get-app">For Customers</a></li>
-            <li><a href="index.html#providers">For Providers</a></li>
+            <li><a href="coming-soon.html">For Customers</a></li>
+            <li><a href="contact.html">For Providers</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Download</a></li>
           </ul>

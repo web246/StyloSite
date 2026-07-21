@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STYLO — Coming Soon</title>
+    <meta name="description" content="The STYLO app is on its way. We’re getting ready for launch." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(124, 58, 237, 0.16), transparent 30%),
+          linear-gradient(135deg, #fffdfd 0%, #f7f2ff 45%, #eef8ff 100%);
+        padding-top: 0;
+      }
+
+      .coming-soon {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .coming-soon__card {
+        position: relative;
+        width: min(760px, 100%);
+        padding: clamp(2rem, 4vw, 3.4rem);
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.78);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(124, 58, 237, 0.14);
+        box-shadow: 0 30px 80px -30px rgba(15, 23, 42, 0.25);
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .coming-soon__card::before,
+      .coming-soon__card::after {
+        content: "";
+        position: absolute;
+        inset: auto;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        filter: blur(30px);
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      .coming-soon__card::before {
+        top: -90px;
+        left: -70px;
+        background: rgba(122, 184, 232, 0.24);
+      }
+
+      .coming-soon__card::after {
+        right: -70px;
+        bottom: -90px;
+        background: rgba(244, 104, 154, 0.22);
+      }
+
+      .coming-soon__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.65rem 1rem;
+        border-radius: 999px;
+        background: rgba(124, 58, 237, 0.1);
+        color: var(--pink);
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+      }
+
+      .coming-soon__headline {
+        font-size: clamp(2.8rem, 7vw, 4.6rem);
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        margin: 0 0 1rem;
+        font-weight: 800;
+        color: #1f1733;
+        position: relative;
+        z-index: 2;
+      }
+
+      .coming-soon__headline span {
+        display: inline-block;
+        position: relative;
+      }
+
+      .coming-soon__copy {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        margin: 0 auto 1.6rem;
+        max-width: 600px;
+      }
+
+      .butterfly {
+        position: absolute;
+        font-size: 1.7rem;
+        animation: butterflyFloat 6s ease-in-out infinite;
+        filter: drop-shadow(0 8px 16px rgba(15, 23, 42, 0.15));
+        z-index: 1;
+      }
+
+      .butterfly--one { left: 8%; top: 16%; animation-delay: -1s; }
+      .butterfly--two { right: 10%; top: 18%; animation-delay: -2.6s; }
+      .butterfly--three { left: 14%; bottom: 16%; animation-delay: -3.4s; }
+      .butterfly--four { right: 12%; bottom: 14%; animation-delay: -4.6s; }
+
+      .coming-soon__actions {
+        display: flex;
+        justify-content: center;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+      }
+
+      .coming-soon__word {
+        display: inline-block;
+        text-transform: lowercase;
+        color: var(--pink);
+      }
+
+      @keyframes butterflyFloat {
+        0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+        25% { transform: translate3d(10px, -14px, 0) rotate(-8deg); }
+        50% { transform: translate3d(20px, 0, 0) rotate(8deg); }
+        75% { transform: translate3d(8px, 12px, 0) rotate(-4deg); }
+      }
+
+      @media (max-width: 640px) {
+        .coming-soon__card { padding: 2rem 1.2rem; }
+        .coming-soon__actions { flex-direction: column; }
+        .butterfly { font-size: 1.3rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="coming-soon">
+      <section class="coming-soon__card" aria-label="Coming soon">
+        <div class="butterfly butterfly--one" aria-hidden="true">🦋</div>
+        <div class="butterfly butterfly--two" aria-hidden="true">🦋</div>
+        <div class="butterfly butterfly--three" aria-hidden="true">🦋</div>
+        <div class="butterfly butterfly--four" aria-hidden="true">🦋</div>
+
+        <div class="coming-soon__badge">✨ Freshly building the experience</div>
+        <h1 class="coming-soon__headline">
+          <span class="coming-soon__word">coming soon</span>
+        </h1>
+        <p class="coming-soon__copy">
+          The STYLO app is almost here. We’re polishing the booking experience so it feels calm, beautiful, and effortless from day one.
+        </p>
+        <div class="coming-soon__actions">
+          <a href="index.html" class="btn btn--primary">Back to home</a>
+          <a href="contact.html" class="btn btn--secondary">Talk to the team</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

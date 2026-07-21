@@ -13,6 +13,172 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Homepage-specific layout and visibility fixes */
+      body {
+        text-align: left;
+      }
+
+      .container {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        width: min(var(--container), calc(100% - 2rem)) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .hero {
+        min-height: 100vh;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        align-items: center;
+        justify-items: start;
+        gap: 2rem;
+      }
+
+      .hero__content,
+      .section,
+      .section .container,
+      .audience-grid,
+      .services-grid,
+      .showcase-grid,
+      .testimonial-grid,
+      .stats-grid,
+      .phone-pair,
+      .city-grid,
+      .footer-grid {
+        text-align: left;
+      }
+
+      .hero__content {
+        max-width: 720px;
+      }
+
+      .section-heading--center {
+        text-align: left;
+      }
+
+      .hero__overlay {
+        background: linear-gradient(135deg, rgba(8, 10, 18, 0.7), rgba(8, 10, 18, 0.45) 40%, rgba(8, 10, 18, 0.15) 70%, rgba(8, 10, 18, 0.05) 100%);
+      }
+
+      .hero__video {
+        filter: brightness(0.42) saturate(1.05);
+      }
+
+      .hero__content .display-heading,
+      .hero__content .hero__subhead,
+      .hero__content .trust-row,
+      .hero__content .pill,
+      .hero__actions .btn {
+        color: #fff;
+      }
+
+      .hero__content .hero__subhead {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero__content .trust-row {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .hero__actions .btn--secondary {
+        color: #111;
+      }
+
+      .hero__actions,
+      .trust-row,
+      .footer-cta {
+        justify-content: flex-start;
+      }
+
+      .showcase-phones {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .showcase-phones .phone-wrap {
+        min-width: min(320px, 100%);
+      }
+
+      .section {
+        padding-inline: clamp(1rem, 4vw, 2.4rem);
+      }
+
+      .section h2,
+      .section p,
+      .card,
+      .service-card,
+      .testimonial-card,
+      .city-card,
+      .footer-cta {
+        text-align: left;
+      }
+
+      @media (max-width: 1024px) {
+        .hero__grid,
+        .showcase-grid,
+        .spotlight-grid,
+        .business-grid,
+        .audience-grid,
+        .services-grid,
+        .testimonial-grid,
+        .stats-grid,
+        .phone-pair,
+        .masonry-grid,
+        .footer-grid,
+        .city-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .hero__content,
+        .hero__visual {
+          max-width: 100%;
+        }
+
+        .hero__actions .btn {
+          width: 100%;
+        }
+
+        .showcase-copy {
+          order: -1;
+        }
+
+        .showcase-phones {
+          justify-content: center;
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .nav {
+          gap: 0.75rem;
+        }
+
+        .nav__panel {
+          width: 100%;
+          justify-content: flex-start;
+        }
+
+        .hero {
+          padding-top: 5rem;
+          padding-bottom: 1.5rem;
+        }
+
+        .hero__actions {
+          flex-direction: column;
+          gap: 0.9rem;
+        }
+
+        .phone {
+          width: min(290px, 90vw);
+          margin: 0 auto;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header" id="top">
@@ -35,8 +201,8 @@
           <a href="index.html" class="active">Home</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
-          <a href="#get-app" class="btn btn--outline nav__pill">Become a Provider</a>
-          <a href="#get-app" class="btn btn--primary nav__pill">Get the App</a>
+          <a href="contact.html" class="btn btn--outline nav__pill">Become a Provider</a>
+          <a href="coming-soon.html" class="btn btn--primary nav__pill">Get the App</a>
         </div>
       </nav>
     </header>
@@ -57,22 +223,14 @@
               Discover verified barbers, hair stylists, and nail technicians near you. Book online, pay a tiny fee, and let the pros come to you.
             </p>
             <div class="hero__actions reveal" data-delay="0.2">
-              <a href="#get-app" class="btn btn--primary">Get the App</a>
-              <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+              <a href="coming-soon.html" class="btn btn--primary">Get the App</a>
+              <a href="contact.html" class="btn btn--secondary">Become a Provider</a>
             </div>
             <div class="trust-row reveal" data-delay="0.25">
               <span class="trust-row__stars" aria-hidden="true">★★★★★</span>
               <span>Loved by 2,000+ customers & 350+ pros</span>
             </div>
           </div>
-          <div class="hero__visual reveal" data-delay="0.12">
-            <div class="hero__blob"></div>
-            <div class="phone phone--float phone--video" style="--tilt:-3deg">
-              <div class="phone__screen">
-                <video autoplay muted loop playsinline poster="assets/app-lifestyle-2-poster.jpg">
-                  <source src="assets/app-lifestyle-2.mp4" type="video/mp4" />
-                </video>
-              </div>
             </div>
           </div>
         </div>
@@ -94,7 +252,7 @@
                 <li>Home service available</li>
                 <li>Save your favourites</li>
               </ul>
-              <a href="#get-app" class="btn btn--primary">Get the App</a>
+              <a href="coming-soon.html" class="btn btn--primary">Get the App</a>
             </article>
             <article class="card card--blue reveal" data-delay="0.12">
               <div class="card__icon card__icon--blue">✨</div>
@@ -105,7 +263,7 @@
                 <li>Manage bookings from your phone</li>
                 <li>Get discovered locally</li>
               </ul>
-              <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+              <a href="contact.html" class="btn btn--secondary">Become a Provider</a>
             </article>
           </div>
         </div>
@@ -122,26 +280,6 @@
                   </div>
                 </div>
               </div>
-
-              <div class="phone-wrap phone-wrap--md">
-                <div class="phone phone--float phone--video phone--tilt-6">
-                  <div class="phone__screen">
-                    <video autoplay muted loop playsinline poster="assets/app-lifestyle-1-poster.jpg">
-                      <source src="assets/app-lifestyle-1.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-              </div>
-
-              <div class="phone-wrap phone-wrap--sm">
-                <div class="phone phone--float phone--video phone--tilt-10">
-                  <div class="phone__screen">
-                    <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-                      <source src="assets/hero-loop.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="showcase-copy reveal" data-delay="0.08">
@@ -153,7 +291,7 @@
               <li><span class="feature-list__icon feature-list__icon--blue">📅</span><span>Real-time availability</span></li>
               <li><span class="feature-list__icon feature-list__icon--pink">🏠</span><span>Home-service booking</span></li>
               <li><span class="feature-list__icon feature-list__icon--blue">⭐</span><span>Ratings & reviews</span></li>
-              <li><span class="feature-list__icon feature-list__icon--pink">💳</span><span>Secure £2.99 booking fee</span></li>
+              <li><span class="feature-list__icon feature-list__icon--pink">💳</span><span>Secure £1.99 booking fee</span></li>
             </ul>
           </div>
         </div>
@@ -180,7 +318,7 @@
               <article class="step-card reveal" data-delay="0.1">
                 <div class="step-card__number">02</div>
                 <h3>Book</h3>
-                <p>Choose a time, confirm your booking, and pay a simple £2.99 fee online.</p>
+                <p>Choose a time, confirm your booking, and pay a simple £1.99 fee online.</p>
               </article>
               <article class="step-card reveal" data-delay="0.15">
                 <div class="step-card__number">03</div>
@@ -251,14 +389,74 @@
         </div>
       </section>
 
+      <section class="section section--services">
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <h2>Services we support</h2>
+            <p>Find the right pro for every look, from barbers and salons to beauty and body art.</p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card reveal" data-delay="0.05">
+              <div class="service-card__icon">💈</div>
+              <div>
+                <h3>Barber</h3>
+                <p>Fresh cuts, fades, shaves and beard styling from trusted local barbers.</p>
+              </div>
+            </article>
+            <article class="service-card reveal" data-delay="0.08">
+              <div class="service-card__icon">💇‍♀️</div>
+              <div>
+                <h3>Hair Salon</h3>
+                <p>Haircuts, colour, styling and salon treatments for every type of hair.</p>
+              </div>
+            </article>
+            <article class="service-card reveal" data-delay="0.11">
+              <div class="service-card__icon">🧕</div>
+              <div>
+                <h3>Braid &amp; Locs</h3>
+                <p>Expert braiding, loc maintenance and creative styling for textured hair.</p>
+              </div>
+            </article>
+            <article class="service-card reveal" data-delay="0.14">
+              <div class="service-card__icon">💅</div>
+              <div>
+                <h3>Nail Salon</h3>
+                <p>Manicures, pedicures and nail art for a polished, professional finish.</p>
+              </div>
+            </article>
+            <article class="service-card reveal" data-delay="0.17">
+              <div class="service-card__icon">✨</div>
+              <div>
+                <h3>Brows &amp; Lashes</h3>
+                <p>Shaping, tinting and lash lifts to enhance your natural beauty.</p>
+              </div>
+            </article>
+            <article class="service-card reveal" data-delay="0.2">
+              <div class="service-card__icon">📍</div>
+              <div>
+                <h3>Piercing</h3>
+                <p>Safe, stylish piercing services from experienced artists.</p>
+              </div>
+            </article>
+            <article class="service-card reveal" data-delay="0.23">
+              <div class="service-card__icon">🖋️</div>
+              <div>
+                <h3>Tattoo Shop</h3>
+                <p>Book custom tattoos and touch-ups with local, vetted artists.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section section--provider-spotlight">
         <div class="container spotlight-grid">
           <div class="spotlight-copy reveal">
             <div class="pill pill--soft">For providers</div>
             <h2>List free. Earn more.</h2>
-            <p>Providers pay nothing to join and keep every penny. We only charge customers a small £2.99 booking fee to keep the platform running.</p>
+            <p>Providers pay nothing to join and keep every penny. We only charge customers a small £1.99 booking fee to keep the platform running.</p>
             <div class="stats-row">
-              <div><strong>£0</strong><span>listing fee</span></div>
+              <div><strong>0</strong><span>listing fee</span></div>
               <div><strong>100%</strong><span>earnings kept</span></div>
               <div><strong>350+</strong><span>pros onboard</span></div>
             </div>
@@ -270,6 +468,20 @@
                 <img src="assets/provider-dashboard.png" alt="STYLO provider dashboard preview" loading="lazy" decoding="async" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--business">
+        <div class="container business-grid">
+          <div class="business-copy reveal">
+            <div class="pill pill--soft">STYLOBiz App • iOS, Android</div>
+            <h2>Grow your business with STYLO</h2>
+            <p>Get started with STYLO to run your calendar, bookings, marketing, and payments all in one place.</p>
+            <a href="contact.html" class="btn btn--primary">Grow My Business</a>
+          </div>
+          <div class="business-visual reveal" data-delay="0.08">
+            <img class="business-image" src="https://i.pinimg.com/736x/14/64/c9/1464c98b31ac730817d99b812a349699.jpg" alt="STYLO business dashboard preview" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -364,8 +576,234 @@
             </div>
           </div>
           <div class="footer-cta reveal" id="get-app">
-            <a href="#top" class="btn btn--primary">Get the App</a>
-            <a href="#providers" class="btn btn--secondary">Become a Provider</a>
+            <a href="coming-soon.html" class="btn btn--primary">Get the App</a>
+            <a href="contact.html" class="btn btn--secondary">Become a Provider</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cities">
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <h2>Cities we’re live in now</h2>
+            <p>STYLO is already live in the cities below. Tap show more to open the full city list.</p>
+          </div>
+          <div class="city-grid">
+            <article class="city-card reveal" data-delay="0.05">
+              <h3>Bath</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.06">
+              <h3>Birmingham</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.07">
+              <h3>Bradford</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.08">
+              <h3>Brighton &amp; Hove</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.09">
+              <h3>Bristol</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.1">
+              <h3>Cambridge</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.11">
+              <h3>Canterbury</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.12">
+              <h3>Carlisle</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.13">
+              <h3>Chelmsford</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.14">
+              <h3>Chester</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.15">
+              <h3>Chichester</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.16">
+              <h3>Colchester</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.17">
+              <h3>Coventry</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.18">
+              <h3>Derby</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.19">
+              <h3>Doncaster</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.2">
+              <h3>Durham</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.21">
+              <h3>Ely</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.22">
+              <h3>Exeter</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.23">
+              <h3>Gloucester</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.24">
+              <h3>Hereford</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.25">
+              <h3>Kingston upon Hull</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.26">
+              <h3>Lancaster</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.27">
+              <h3>Leeds</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.28">
+              <h3>Leicester</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.29">
+              <h3>Lichfield</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.3">
+              <h3>Lincoln</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.31">
+              <h3>Liverpool</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.32">
+              <h3>London</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal city-card--live" data-delay="0.33">
+              <h3>Manchester</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.34">
+              <h3>Milton Keynes</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.35">
+              <h3>Newcastle upon Tyne</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.36">
+              <h3>Norwich</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.37">
+              <h3>Nottingham</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.38">
+              <h3>Oxford</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.39">
+              <h3>Peterborough</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.4">
+              <h3>Plymouth</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.41">
+              <h3>Portsmouth</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.42">
+              <h3>Preston</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.425">
+              <h3>Rotherham</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.43">
+              <h3>Ripon</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.44">
+              <h3>Salford</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.45">
+              <h3>Salisbury</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.46">
+              <h3>Sheffield</h3>
+              <p>Live</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.47">
+              <h3>Southampton</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.48">
+              <h3>Southend-on-Sea</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.49">
+              <h3>St Albans</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.5">
+              <h3>Stoke-on-Trent</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.51">
+              <h3>Sunderland</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.52">
+              <h3>Truro</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.53">
+              <h3>Wakefield</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.54">
+              <h3>Wells</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.55">
+              <h3>Westminster</h3>
+              <p>Coming soon</p>
+            </article>
+            <article class="city-card reveal" data-delay="0.56">
+              <h3>Winchester</h3>
+              <p>Coming soon</p>
+            </article>
+          </div>
+          <div class="city-actions reveal">
+            <button class="btn btn--outline city-toggle" type="button">Show more cities</button>
           </div>
         </div>
       </section>
