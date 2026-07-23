@@ -61,6 +61,7 @@ button { cursor: pointer; }
 .btn--outline { border-color: #e4d9ff; background: transparent; color: var(--text); }
 .btn--outline:hover { border-color: var(--pink); color: var(--pink); }
 .site-header { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 74px; background: rgba(248, 244, 255, 0.82); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid transparent; transition: all 0.25s ease; }
+.phone__screen img, .phone__screen video { max-height: none; height: 100%; width: 100%; object-fit: cover; object-position: center; }
 .site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 4px 30px -10px rgba(75, 20, 140, 0.12); }
 .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; }
 .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.3rem; color: var(--text); }
@@ -378,8 +379,7 @@ body { padding-top: 74px; }
   .about-hero__card img,
   .story-image img,
   .masonry-tile img,
-  .masonry-tile video,
-  .phone__screen img {
+  .masonry-tile video {
     max-height: 220px;
     height: auto;
     object-fit: cover;
